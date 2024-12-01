@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: ry-ta2647-react-vite-container
-          image: pipejet/ry-ta2647-react-vite:0
+          image: pipejet/ry-ta2647-react-vite:1
           ports:
             - containerPort: 5173
