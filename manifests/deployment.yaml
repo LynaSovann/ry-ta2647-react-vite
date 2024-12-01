@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ry-ta2647-react-vite-deployment
+  labels:
+    app: ry-ta2647-react-vite
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ry-ta2647-react-vite
+  template:
+    metadata:
+      labels:
+        app: ry-ta2647-react-vite
+    spec:
+      containers:
+        - name: ry-ta2647-react-vite-container
+          image: pipejet/ry-ta2647-react-vite:0
+          ports:
+            - containerPort: 5173
