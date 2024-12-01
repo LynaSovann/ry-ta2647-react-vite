@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: ry-ta2647-react-vite-certificate
+  namespace: ry-ta2647-react-vite
+spec:
+  secretName: ry-ta2647-react-vite-secret-tls
+  commonName: ry-ta2647-react-vite.assessify.org
+  dnsNames:
+  - ry-ta2647-react-vite.assessify.org
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
